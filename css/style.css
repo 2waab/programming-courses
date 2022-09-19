@@ -70,6 +70,7 @@ header .container {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    z-index: 10;
 }
 header .container::after {
     content: "";
@@ -156,6 +157,7 @@ header .sing button {
     background-color: transparent;
     border: 2px solid transparent;
     transition: var(--main-transition);
+    color: var(--text-color);
 }
 header .sing button.up {
     border-color: var(--main-color);
@@ -169,7 +171,7 @@ header .sing button:hover {
     }
     header ul {
         position: fixed;
-        z-index: 99999999;
+        z-index: 99999999999999;
         left: 0;
         top: 0;
         width: 100%;
@@ -225,3 +227,128 @@ header .sing button:hover {
     }
 }
 /* End Header */
+/* Start Landing */
+.landing .container {
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+.landing .container::after {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background-color: #b4004205;
+    top: -20px;
+    left: 0;
+    z-index: -10000;
+}
+.landing .container::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: #ff9f221a;
+    bottom: 0;
+    right: 0;
+    z-index: -10000;
+}
+.landing .text {
+    width: 50%;
+}
+.landing .text h1 {
+    margin: 0 0 50px;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 500;
+    color: #000;
+}
+.landing .text button {
+    border: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--main-color-alt);
+    transition: var(--main-transition);
+    color: var(--text-color);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.landing .text button:hover {
+    border-color: var(--hover-two-color);
+}
+.landing .image {
+    width: 50%;
+}
+@media (max-width: 992px) {
+    .landing .image {
+        display: none;
+    }
+    .landing .text {
+        width: 100%;
+    }
+    .landing .text h1 {
+        font-size: 28px;
+    }
+}
+/* End Landing */
+/* Start Scand Landing */
+.landingTwo {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.landingTwo .container {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+.landingTwo .image {
+    width: 40%;
+}
+.landingTwo .text {
+    width: 55%;
+}
+.landingTwo .text h2 {
+    width: fit-content;
+    font-size: 40px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+}
+.landingTwo .text h2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 99999px;
+    background-color: var(--main-color);
+    left: 5px;
+    bottom: 10px;
+    z-index: -1;
+}
+.landingTwo .text p {
+    width: 70%;
+    font-size: 22px;
+    font-weight: 500;
+}
+@media (max-width: 992px) {
+    .landingTwo .image {
+        display: none;
+    }
+    .landingTwo .text {
+        width: 100%;
+    }
+}
+/* End Scand Landing */
