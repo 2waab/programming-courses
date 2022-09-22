@@ -433,7 +433,7 @@ header .sing button:hover {
     border: none;
     outline: none;
     background-color: transparent;
-    color: var(--text-color);
+    color: #000;
     cursor: pointer;
 }
 .courses .tab button::after {
